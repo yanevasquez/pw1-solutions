@@ -1,4 +1,4 @@
-version: "3"
+version: "2"
 
 services:
   web:
@@ -10,7 +10,7 @@ services:
     ports:
       - 8080:80
     volumes:
-      - ./src/:/var/www/html/
+      - ./:/var/www/html/
     depends_on:
       - mysql
   mysql:
@@ -26,7 +26,7 @@ services:
     networks:
       - app-tier
     ports:
-      - 3306:3306
+      - 3307:3306
 
 networks:
   app-tier:
